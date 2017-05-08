@@ -1,0 +1,29 @@
+{
+  "name": "steal-conditional-stache",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "steal-tools",
+    "start": "http-server -c-1",
+    "live-reload": "steal-tools live-reload"
+  },
+  "author": "Bitovi",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.10.0",
+    "steal": "stealjs/steal#master",
+    "steal-conditional": "stealjs/steal-conditional#fix-substitution",
+    "steal-stache": "^3.0.5",
+    "steal-tools": "^1.3.3"
+  },
+  "steal": {
+    "plugins": [
+      "steal-stache"
+    ],
+    "configDependencies": [
+      "live-reload",
+      "./node_modules/steal-conditional/conditional"
+    ]
+  }
+}
